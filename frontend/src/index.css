@@ -1,0 +1,31 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 10px !important;
+}
+
+.MuiTableCell-root.MuiTableCell-head,
+.MuiTableCell-root.MuiTableCell-body {
+	font-size: 10px;
+	line-height: 1.5;
+	padding: 0.5rem;
+	border: solid rgba(224, 224, 224, 1);
+}
+
+.MuiTableCell-root.MuiTableCell-head:first-child,
+.MuiTableCell-root.MuiTableCell-body:first-child {
+	border-width: 0px 1px 1px 1px;
+}
+
+.MuiTableCell-root.MuiTableCell-head:not(:first-child),
+.MuiTableCell-root.MuiTableCell-body:not(:first-child) {
+	border-width: 0px 1px 1px 0px;
+}
+
+[type="checkbox"] {
+	vertical-align: middle;
+}
