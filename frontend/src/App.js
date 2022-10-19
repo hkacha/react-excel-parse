@@ -8,7 +8,7 @@ const App = () => {
 	return (
 		<>
 			<FilterProvider>
-				{/* <Grid
+				<Grid
 					container
 					spacing={2}
 					style={{
@@ -37,7 +37,7 @@ const App = () => {
 					>
 						<UserTable />
 					</Grid>
-				</Grid> */}
+				</Grid>
 			</FilterProvider>
 		</>
 	);
