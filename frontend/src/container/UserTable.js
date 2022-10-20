@@ -57,8 +57,8 @@ const UserTable = () => {
 					{HEADERS &&
 						HEADERS.map((item) => {
 							return (
-								<TableCell key={item} style={{ top: 45 }}>
-									{item}
+								<TableCell key={item.title} style={{ top: 45 }}>
+									{item.title}
 								</TableCell>
 							);
 						})}
