@@ -8,3 +8,8 @@ export const HEADERS = [
 	{ key: "AGE", title: "Age" },
 	{ key: "PIN_CODE", title: "Pincode" },
 ];
+
+export const USER = {
+	LOAD: "REQUEST_USERS_DATA",
+	LOAD_SUCCESS: "RECEIVE_USERS_DATA",
+};

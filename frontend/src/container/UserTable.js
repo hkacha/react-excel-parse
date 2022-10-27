@@ -21,15 +21,18 @@ const CustomButton = styled(Button)({
 });
 
 const UserTable = () => {
-	const { result, filteredData, handleExportFile } = useContext(FilterContext);
+	const { filteredData, handleExportFile, usersData } =
+		useContext(FilterContext);
 	let Rows = [];
+
+	console.log(usersData);
 
 	if (filteredData.length > 0) {
 		filteredData.forEach((user, index) => {
 			Rows.push(<UserRows user={user} key={index} />);
 		});
 	} else {
-		result.forEach((user, index) => {
+		usersData.forEach((user, index) => {
 			Rows.push(<UserRows user={user} key={index} />);
 		});
 	}
