@@ -8,13 +8,13 @@ import {
 	Typography,
 } from "@mui/material";
 
-import { FilterContext } from "../context/FilterContext";
+// import { FilterContext } from "../context/FilterContext";
 
-const Filter = () => {
-	const { handleCreateFilter, selectedFilter, isFiltered, filterList } =
-		useContext(FilterContext);
+const Filter = ({newFilters}) => {
+	// const { handleCreateFilter, selectedFilter, isFiltered, filterList } =
+	// 	useContext(FilterContext);
 
-	console.log(filterList);
+	console.log(newFilters);
 
 	return (
 		<Table stickyHeader aria-label="sticky table">
@@ -28,16 +28,16 @@ const Filter = () => {
 				</TableRow>
 			</TableHead>
 			<TableBody>
-				{filterList &&
-					Object.keys(filterList).map((item, index) => {
+				{newFilters &&
+					Object.keys(newFilters).map((item, index) => {
 						return (
 							<TableRow key={index}>
 								<TableCell>
 									<Typography variant="caption" fontSize={11} fontWeight={500}>
 										{item}
 									</Typography>
-									{filterList[item] &&
-										filterList[item].map((subItem, subIndex) => {
+									{newFilters[item] &&
+										newFilters[item].map((subItem, subIndex) => {
 											return (
 												<div className="checkbox" key={subIndex}>
 													<input
@@ -45,7 +45,6 @@ const Filter = () => {
 														name={item}
 														id={`${item}-${subItem}`}
 														value={subItem}
-														onChange={(e) => handleCreateFilter(e)}
 													/>
 													{subItem}
 												</div>
